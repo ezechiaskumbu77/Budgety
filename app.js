@@ -8,7 +8,16 @@ let budgetController = (function () {
 
 //UI CONTROLLER
 let UIController = (function () {
-    // some code
+    
+    return{
+        getInput: function(){
+            return{
+                type : document.querySelector('.add__type').value, // will be either Inc and Exp
+                description : document.querySelector('.add__description').value,
+                value : document.querySelctor('.add__value').value,
+            };
+        },
+    };
 })();
 
 
@@ -17,6 +26,8 @@ let controller = (function (budgetCtrl, UICtrl) {
     // Handling Event/click and keypress
     let ctrlAddItem = function () {
         //  1. Get the filed input data
+        let input = UIController.getInput();
+        console.log(input);
         //  2. Add the item to the budget controller
         //  3. Add the item to the UI
         //  4. Calculate the budget
