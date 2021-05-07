@@ -12,9 +12,9 @@ let UIController = (function () {
     return{
         getInput: function(){
             return{
-                type : document.querySelector('.add__type').value, // will be either Inc and Exp
-                description : document.querySelector('.add__description').value,
-                value : document.querySelctor('.add__value').value,
+                type : document.querySelector('.addType').value, // will be either Inc and Exp
+                description : document.querySelector('.addDescription').value,
+                value : document.querySelctor('.addValue').value,
             };
         },
     };
@@ -34,7 +34,7 @@ let controller = (function (budgetCtrl, UICtrl) {
         //  15. Display the budget on the UI
 
     };
-    document.querySelector('.add__btn').addEventListener('click', ctrlAddItem);
+    document.querySelector('.addBtn').addEventListener('click', ctrlAddItem);
     document.addEventListener('keypress', function (e) {
         if (e.keyCode === 13 || e.which === 13) {
             ctrlAddItem();
