@@ -1,45 +1,35 @@
 //jshint esversion:6
+// Budget 
 
-// BUDGET CONTROLLER
-let budgetController = (function () {
-    // some code
-})();
+// BUDGET CONTROLLER 
+const budgetController = (function () {
 
+}
+)();
 
 //UI CONTROLLER
 let UIController = (function () {
-    
-    return{
-        getInput: function(){
-            return{
-                type : document.querySelector('.addType').value, // will be either Inc and Exp
-                description : document.querySelector('.addDescription').value,
-                value : document.querySelctor('.addValue').value,
-            };
-        },
-    };
-})();
 
+}
+)();
 
 // GLOBAL APP CONTROLLER
 let controller = (function (budgetCtrl, UICtrl) {
-    // Handling Event/click and keypress
-    let ctrlAddItem = function () {
-        //  1. Get the filed input data
-        let input = UIController.getInput();
-        console.log(input);
-        //  2. Add the item to the budget controller
-        //  3. Add the item to the UI
-        //  4. Calculate the budget
-        //  15. Display the budget on the UI
+  let ctrlAddItem = function () {
+    // TodoLis
+    // 1. Get the field input data
+    // 2. Add item to the budget controller
+    // 3. Add item to the UI
+    // 4. Calculate the budget
+    // 5. Display the budget on the UI
+    console.log("it works!")
+  }
+  document.querySelector('.addBtn').addEventListener('click', ctrlAddItem);
 
-    };
-    document.querySelector('.addBtn').addEventListener('click', ctrlAddItem);
-    document.addEventListener('keypress', function (e) {
-        if (e.keyCode === 13 || e.which === 13) {
-            ctrlAddItem();
-        }
-    });
+  document.addEventListener('keypress', function (e) {
+    if (e.keyCode == 13 || e.which == 13) {
+      ctrlAddItem();
+    }
+  })
 
 })(budgetController, UIController);
-
